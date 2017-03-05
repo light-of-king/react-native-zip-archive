@@ -8,8 +8,13 @@
 
 #import "RNZipArchive.h"
 
+#if __has_include(<React/RCTAssert.h>)
 #import <React/RCTBridge.h>
 #import <React/RCTEventDispatcher.h>
+#else
+#import "RCTEventDispatcher.h"
+#import "RCTBridge.h"
+#endif
 
 @implementation RNZipArchive
 
